@@ -1,0 +1,390 @@
+{
+    "DigitalContractAddress": {
+        "address": "0xc7895724678963b8face15c9768946a3f8e79e9f",
+        "abi": [
+            {
+                "constant": true,
+                "inputs": [],
+                "name": "getTotalDocument",
+                "outputs": [
+                    {
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": false,
+                "inputs": [
+                    {
+                        "name": "_docType",
+                        "type": "string"
+                    },
+                    {
+                        "name": "_ipfsHash",
+                        "type": "string"
+                    },
+                    {
+                        "name": "_dataHash",
+                        "type": "string"
+                    }
+                ],
+                "name": "addDocument",
+                "outputs": [],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [
+                    {
+                        "name": "_addr",
+                        "type": "address"
+                    }
+                ],
+                "name": "getUser",
+                "outputs": [
+                    {
+                        "name": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "",
+                        "type": "string"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": false,
+                "inputs": [
+                    {
+                        "name": "_idType",
+                        "type": "string"
+                    },
+                    {
+                        "name": "_ipfsHash",
+                        "type": "string"
+                    },
+                    {
+                        "name": "_dataHash",
+                        "type": "string"
+                    }
+                ],
+                "name": "addIdentity",
+                "outputs": [],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [],
+                "name": "owner",
+                "outputs": [
+                    {
+                        "name": "",
+                        "type": "address"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": false,
+                "inputs": [
+                    {
+                        "name": "_addr",
+                        "type": "address"
+                    },
+                    {
+                        "name": "_index",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "verifyIdentity",
+                "outputs": [],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "constant": false,
+                "inputs": [
+                    {
+                        "name": "_addr",
+                        "type": "address"
+                    },
+                    {
+                        "name": "_index",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "verifyDocument",
+                "outputs": [],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [
+                    {
+                        "name": "_addr",
+                        "type": "address"
+                    },
+                    {
+                        "name": "_index",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "getDocument",
+                "outputs": [
+                    {
+                        "name": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "",
+                        "type": "bool"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [],
+                "name": "getTotalIdentity",
+                "outputs": [
+                    {
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": false,
+                "inputs": [
+                    {
+                        "name": "_addr",
+                        "type": "address"
+                    },
+                    {
+                        "name": "_name",
+                        "type": "string"
+                    },
+                    {
+                        "name": "_email",
+                        "type": "string"
+                    }
+                ],
+                "name": "addUser",
+                "outputs": [],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [
+                    {
+                        "name": "_addr",
+                        "type": "address"
+                    },
+                    {
+                        "name": "_index",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "getIdentity",
+                "outputs": [
+                    {
+                        "name": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "",
+                        "type": "string"
+                    },
+                    {
+                        "name": "",
+                        "type": "bool"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "constructor"
+            },
+            {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": true,
+                        "name": "addr",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": true,
+                        "name": "name",
+                        "type": "string"
+                    },
+                    {
+                        "indexed": true,
+                        "name": "email",
+                        "type": "string"
+                    }
+                ],
+                "name": "AddUser",
+                "type": "event"
+            },
+            {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": true,
+                        "name": "addr",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": false,
+                        "name": "idType",
+                        "type": "string"
+                    },
+                    {
+                        "indexed": false,
+                        "name": "ipfsHash",
+                        "type": "string"
+                    },
+                    {
+                        "indexed": false,
+                        "name": "dataHash",
+                        "type": "string"
+                    },
+                    {
+                        "indexed": false,
+                        "name": "index",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "AddIdentity",
+                "type": "event"
+            },
+            {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": true,
+                        "name": "addr",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": false,
+                        "name": "docType",
+                        "type": "string"
+                    },
+                    {
+                        "indexed": false,
+                        "name": "ipfsHash",
+                        "type": "string"
+                    },
+                    {
+                        "indexed": false,
+                        "name": "dataHash",
+                        "type": "string"
+                    },
+                    {
+                        "indexed": false,
+                        "name": "index",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "AddDocument",
+                "type": "event"
+            },
+            {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": true,
+                        "name": "verifiedBy",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": true,
+                        "name": "addr",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": false,
+                        "name": "idType",
+                        "type": "string"
+                    },
+                    {
+                        "indexed": true,
+                        "name": "index",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "VerifyIdentity",
+                "type": "event"
+            },
+            {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": true,
+                        "name": "verifiedBy",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": true,
+                        "name": "addr",
+                        "type": "address"
+                    },
+                    {
+                        "indexed": false,
+                        "name": "idType",
+                        "type": "string"
+                    },
+                    {
+                        "indexed": true,
+                        "name": "index",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "VerifyDocument",
+                "type": "event"
+            }
+        ]
+    }
+}

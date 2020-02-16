@@ -1,0 +1,32 @@
+{
+  "name": "blockchainConnector",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "forever start --minUptime 1000 --spinSleepTime 1000 -o blockchainOut.log -e blockchainErr.log index.js",
+    "dev-start": "node index.js",
+    "stop": "forever stop index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.6.2",
+    "bcrypt": "^3.0.2",
+    "bignumber.js": "5.0.0",
+    "crypto-js": "^3.1.9-1",
+    "crypto-json": "^2.0.2",
+    "dotenv": "^6.2.0",
+    "ethereumjs-tx": "^1.3.7",
+    "lodash": "^4.17.11",
+    "log4js": "^4.0.2",
+    "rotating-file-stream": "^1.4.0",
+    "seneca": "^3.8.0-rc3",
+    "solc": "^0.4.26",
+    "uuid": "^3.4.0",
+    "web3": "^0.20.6"
+  }
+}

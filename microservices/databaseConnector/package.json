@@ -1,0 +1,28 @@
+{
+  "name": "databaseConnector",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "forever start --minUptime 1000 --spinSleepTime 1000 -o databaseOut.log -e databaseErr.log index.js",
+    "dev-start": "node index.js",
+    "stop": "forever stop index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.4",
+    "crypto-json": "^2.0.2",
+    "db-migrate": "^0.11.5",
+    "db-migrate-mongodb": "^1.5.0",
+    "dotenv": "^6.2.0",
+    "lodash": "^4.17.11",
+    "log4js": "^4.0.2",
+    "mongoose": "^5.4.0",
+    "rotating-file-stream": "^1.4.0",
+    "seneca": "^3.8.0-rc3"
+  }
+}

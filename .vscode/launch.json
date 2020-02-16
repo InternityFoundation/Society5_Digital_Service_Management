@@ -1,0 +1,76 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Chrome_Debugger",
+            "url": "https://localhost:8080",
+            "webRoot": "${workspaceRoot}/public"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "WEB_APP",
+            "program": "${workspaceFolder}/bin/www",
+            "cwd": "${workspaceFolder}",
+            "outFiles": []
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "DB_MICROSERVICE",
+            "program": "${workspaceFolder}/microservices/databaseConnector/index.js",
+            "cwd": "${workspaceFolder}/microservices/databaseConnector",
+            "outFiles": []
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "BLOCKCHAIN_MICROSERVICE",
+            "program": "${workspaceFolder}/microservices/blockchainConnector/index.js",
+            "cwd": "${workspaceFolder}/microservices/blockchainConnector",
+            "outFiles": []
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "BLOCKCHAIN_DEPLOYMENT_DIGITAL",
+            "program": "${workspaceFolder}/microservices/blockchainConnector/contracts/deployContracts/deployDigitalContract.js",
+            "cwd": "${workspaceFolder}/microservices/blockchainConnector/contracts/deployContracts/",
+            "outFiles": []
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "WEB_APP",
+            "program": "${workspaceFolder}/bin/www",
+            "cwd": "${workspaceFolder}",
+            "outFiles": []
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "DB_MIGRATE",
+            "program": "${workspaceFolder}/microservices/databaseConnector/node_modules/db-migrate/bin/db-migrate",
+            "cwd": "${workspaceFolder}/microservices/databaseConnector/",
+            "args": [
+                "up"
+            ],
+            "outFiles": []
+        }
+    ],
+    "compounds": [
+        {
+            "name": "WEB_APP + ALL_MICROSERVICES",
+            "configurations": [
+                "DB_MICROSERVICE",
+                "BLOCKCHAIN_MICROSERVICE",
+                "WEB_APP"
+            ]
+        }
+    ],
+}
